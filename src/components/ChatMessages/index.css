@@ -1,0 +1,21 @@
+.chat-message-area {
+  flex-grow: 1;
+  overflow-y: auto;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.chat-message-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  color: var(--color-text-muted);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}

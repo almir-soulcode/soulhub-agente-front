@@ -1,0 +1,108 @@
+.message-item {
+  padding: 16px;
+  border-radius: 16px;
+  color: black;
+}
+
+.message-item.user {
+  background-color: var(--sc-black-200);
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.message-item.nonuser {
+  background-color: var(--sc-blue-300);
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+.custom-list {
+  list-style-type: disc;
+  margin-left: 1rem; /* ml-4 */
+  margin-top: 0.5rem; /* my-2 → mt-2 */
+  margin-bottom: 0.5rem; /* my-2 → mb-2 */
+}
+
+.custom-ordered-list {
+  list-style-type: decimal;
+  margin-left: 1rem; /* ml-4 */
+  margin-top: 0.5rem; /* my-2 → mt-2 */
+  margin-bottom: 0.5rem; /* my-2 → mb-2 */
+}
+
+.custom-list-item {
+  margin-bottom: 0.25rem; /* mb-1 */
+}
+
+.custom-h1 {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700; /* font-bold */
+  margin-top: 1rem; /* mt-4 */
+  margin-bottom: 0.5rem; /* mb-2 */
+  color: #111827; /* text-gray-900 */
+}
+
+.custom-h2 {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  margin-top: 1rem; /* mt-4 */
+  margin-bottom: 0.5rem; /* mb-2 */
+  color: #111827; /* text-gray-900 */
+}
+
+.custom-h3 {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  margin-top: 0.75rem; /* mt-3 */
+  margin-bottom: 0.25rem; /* mb-1 */
+  color: #111827; /* text-gray-900 */
+}
+
+.custom-h4 {
+  font-size: 1rem; /* text-base */
+  font-weight: 600; /* font-semibold */
+  margin-top: 0.5rem; /* mt-2 */
+  margin-bottom: 0.25rem; /* mb-1 */
+  color: #111827; /* text-gray-900 */
+}
+
+.custom-paragraph {
+  margin-bottom: 0.5rem; /* mb-2 */
+  line-height: 1.625; /* leading-relaxed → 1.625 */
+}
+
+.message-item hr {
+  margin: 16px 0;
+}
+
+.message-item table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.message-item th,
+.message-item td {
+  border: 1px solid black;
+  padding: 6px 8px;
+  text-align: left;
+}
+
+.message-item th {
+  font-weight: bold;
+}
+
+.inline-code {
+  background-color: #f3f4f6; /* bg-gray-100 */
+  font-size: 0.875rem;       /* text-sm */
+  padding-left: 0.25rem;     /* px-1 */
+  padding-right: 0.25rem;    /* px-1 */
+  padding-top: 0.125rem;     /* py-0.5 */
+  padding-bottom: 0.125rem;  /* py-0.5 */
+  border-radius: 0.25rem;    /* rounded */
+  font-family: monospace;    /* boa prática para <code> */
+}
+
+.relative {
+  position: relative;
+}

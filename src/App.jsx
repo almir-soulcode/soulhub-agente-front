@@ -1,7 +1,11 @@
+import Chat from "./components/Chat"
+import Navbar from "./components/Navbar"
+
 function App() {
   return (
     <>
-      <h2>FRONT AGENTE IA</h2>
+      <Navbar title="Professor IA"/>
+      <Chat />
     </>
   )
 }

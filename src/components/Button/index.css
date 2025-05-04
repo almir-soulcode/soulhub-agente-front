@@ -1,0 +1,28 @@
+.button {
+  cursor: pointer;
+  gap: 16px;
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  border-radius: 8px;
+  background-color: var(--sc-blue-700);
+  color: var(--sc-black-50);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  border: none;
+}
+
+.button:hover {
+  background-color: var(--sc-blue-800);
+}
+
+.button:active {
+  background-color: var(--sc-blue-900);
+}
+
+.button[disabled] {
+  background-color: var(--sc-black-400);
+}

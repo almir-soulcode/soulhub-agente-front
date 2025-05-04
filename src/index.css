@@ -1,0 +1,7 @@
+:root {
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--color-bg);
+}
