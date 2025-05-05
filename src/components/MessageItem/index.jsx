@@ -1,21 +1,23 @@
 /* eslint-disable no-unused-vars */
-import './index.css';
+import "./index.css";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
-import remarkGfm from "remark-gfm"; 
-import CopyButton from '../CopyButton';
+import remarkGfm from "remark-gfm";
+import CopyButton from "../CopyButton";
+import Avatar from "../Avatar";
+import chatAvatar from "../../assets/chat-ai.jpeg";
 
-export default function MessageItem({sender, text}) {
+export default function MessageItem({ sender, text }) {
   const renderers = {
     code({ node, inline, className, children, ...props }) {
       const match = /language-(\w+)/.exec(className || "");
-  
+
       const codeString = String(children).replace(/\n$/, "");
-  
+
       return !inline && match ? (
         <div className="relative">
-          <CopyButton code={codeString}/>
+          <CopyButton code={codeString} />
           <SyntaxHighlighter
             style={oneLight}
             language={match[1]}
@@ -32,18 +34,22 @@ export default function MessageItem({sender, text}) {
           </SyntaxHighlighter>
         </div>
       ) : (
-        <code
-          className="inline-code"
-          {...props}
-        >
+        <code className="inline-code" {...props}>
           {children}
         </code>
       );
     },
   };
 
-    return <div className={`message-item ${sender === "user" ? "user" : "nonuser"}`}>
-        {sender === "user" ? text : (<ReactMarkdown components={{
+  return (
+    <div className={`message-item-wrapper ${sender === "user" ? "user" : "nonuser"}`}>
+      <Avatar src={sender !== "user" ? chatAvatar : undefined}/>
+      <div className={`message-item ${sender === "user" ? "user" : "nonuser"}`}>
+        {sender === "user" ? (
+          text
+        ) : (
+          <ReactMarkdown
+            components={{
               ...renderers,
               ul: ({ node, ...props }) => (
                 <ul className="custom-list" {...props} />
@@ -69,7 +75,13 @@ export default function MessageItem({sender, text}) {
               p: ({ node, ...props }) => (
                 <p className="custom-paragraph" {...props} />
               ),
-            }} remarkPlugins={[remarkGfm]}>{text}</ReactMarkdown>
-          )}
+            }}
+            remarkPlugins={[remarkGfm]}
+          >
+            {text}
+          </ReactMarkdown>
+        )}
+      </div>
     </div>
+  );
 }

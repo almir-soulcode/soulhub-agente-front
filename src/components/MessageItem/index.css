@@ -7,13 +7,13 @@
 .message-item.user {
   background-color: var(--sc-black-200);
   align-self: flex-end;
-  border-bottom-right-radius: 0;
+  /*border-bottom-right-radius: 0;*/
 }
 
 .message-item.nonuser {
   background-color: var(--sc-blue-300);
   align-self: flex-start;
-  border-bottom-left-radius: 0;
+  /*border-bottom-left-radius: 0;*/
 }
 
 .custom-list {
@@ -105,4 +105,14 @@
 
 .relative {
   position: relative;
+}
+
+.message-item-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.message-item-wrapper.user {
+  flex-direction: row-reverse;
 }

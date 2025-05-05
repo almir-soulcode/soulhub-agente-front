@@ -13,7 +13,9 @@ export default function ChatMessages({ messages, loading }) {
   if (messages.length === 0) {
     return (
       <section className="chat-message-area">
-        <div className="chat-message-empty">Envie uma pergunta para começar</div>
+        <div className="chat-message-empty">
+          Envie uma pergunta para começar
+        </div>
       </section>
     );
   }
